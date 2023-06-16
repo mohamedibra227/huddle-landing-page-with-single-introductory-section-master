@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+:root {
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif; */
+body {
+    height: 100vh;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    padding: 2rem;
+    background-image: url(../images/bg-mobile.svg);
+    background-repeat: no-repeat;
+    background-color: var(--Violet);
+    display: grid;
+    gap: 2.5rem;
+}
+/* header {
+    display: flex;
+} */
+header img {
+    width: 120px;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+main img {
+    width: 320px;
+    margin-bottom: 20px;
+}
+main h3 {
+    font-family: 'Open Sans', sans-serif;
+}
+main h3, p {
+    color: #fff;
+    line-height: 1.5;
+}
+p {
+    font-size: 15px;
+    font-weight: 400;
+}
+button {
+    border: none;
+    color: var(--Violet);
+    font-size: 15px;
+    padding: 10px 60px;
+    border-radius: 25px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: var(--Soft-Magenta);
+    color: #fff;
+    transition: .5s;
+}
+.social {
+    display: flex;
+    gap: 0.7rem;
+    margin-bottom: 2rem;
+}
+.social a {
+    color: white;
+}
+.social a:hover {
+    color: var(--Soft-Magenta);
+    transition: .5s;
+}
+@media (min-width: 1024px) {
+    body {
+        background-image: url(../images/bg-desktop.svg);
+    }
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: left;
+
+    }
+    main img {
+       width: 100%;
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin: 0 25px;
+        line-height: 2.5;
+        padding: 0 100px;
+    }
+    .content h3 {
+        font-size: 35px;
+    }
+    button {
+        width: fit-content;
+    }
+}
